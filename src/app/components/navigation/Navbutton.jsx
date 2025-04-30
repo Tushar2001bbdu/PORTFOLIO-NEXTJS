@@ -16,7 +16,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-export default function Navbutton({ x, y, label, link, newtab, icon }) {
+export default function Navbutton({ x, y, label, link, newtab, icon ,angle}) {
   const getIcon = (iconName) => {
     switch (iconName.toLowerCase()) {
       case 'house':
@@ -42,7 +42,7 @@ export default function Navbutton({ x, y, label, link, newtab, icon }) {
 
   return (
     <div
-      style={{ transform: `translate(${x}px, ${y}px)` }}
+      style={{ transform: `translate(${x}px, ${y}px) rotate(${angle}deg)` }}
       className="absolute z-50 flex justify-center items-center cursor-pointer"
     >
       <Link

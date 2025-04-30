@@ -16,7 +16,7 @@ export default function page() {
         src="/projects-background.png"
         alt="background image"
         fill
-        className="object-cover opacity-50 -z-10"
+        className="object-cover opacity-80 -z-10"
       />
 
       <div className="flex flex-col md:flex-row w-full h-full z-10">

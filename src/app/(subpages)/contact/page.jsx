@@ -13,7 +13,7 @@ export default function Contact() {
         src="/contact-background.png"
         alt="background image"
         fill
-        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-50"
+        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-80"
       />
 
       <article className="relative w-full min-h-screen flex flex-col items-center justify-center  py-8 sm:py-0 space-y-8">

@@ -55,12 +55,12 @@ export default function Navigation() {
       <div className="relative w-fit h-fit group">
       <div className="relative w-fit h-fit animate-orbit  group-hover:animate-none">
         {BtnList.map((btn, index) => {
-          const angleRadian = (index * angleIncrement * Math.PI) / 180;
-          const x = radius * Math.cos(angleRadian);
-          const y = radius * Math.sin(angleRadian);
+          const angle = (index * angleIncrement * Math.PI) / 180;
+          const x = radius * Math.cos(angle);
+          const y = radius * Math.sin(angle);
           console.log(btn)
           return (
-            <Navbutton key={index} x={x} y={y} label={btn.label} link={btn.link} newtab={btn.newTab} icon={btn.icon} />
+            <Navbutton key={index} radius={radius} x={x} y={y} angle={angle} label={btn.label} link={btn.link} newtab={btn.newTab} icon={btn.icon} />
             
           );
         })}
