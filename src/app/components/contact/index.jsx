@@ -1,12 +1,17 @@
 'use client';
 
-import React from 'react';
+import React ,{useState} from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { Button, Alert, Stack } from '@mui/material';
+
+
+
 
 export default function Form() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-
+  const[success,setSuccess]=useState(false)
+  const[status,setStatus]=useState("")
   const onSubmit = (data) => {
    
    try{
@@ -16,10 +21,13 @@ export default function Form() {
       "yl-4aq68v2DVWy_8B")
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        alert("Message sent successfully!");
+        setStatus("success");
+        setSuccess(true);
         reset();
       })
       .catch((err) => {
+        setStatus("severe");
+        setSuccess(true);
         console.error('FAILED...', err);
         alert("Something went wrong.");
       });}
@@ -29,6 +37,12 @@ export default function Form() {
   };
 
   return (
+    <>
+    {success && (
+        <Alert severity={status} onClose={() => setSuccess(false)}>
+          "Your Message Has Been Sent Successfully"
+        </Alert>
+      )}
     <form className="max-w-md w-full flex flex-col items-center space-y-4 p-6 shadow-lg rounded-md" onSubmit={handleSubmit(onSubmit)}>
       
       <input
@@ -61,5 +75,6 @@ export default function Form() {
         className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded cursor-pointer"
       />
     </form>
+    </>
   );
 }

@@ -13,7 +13,7 @@ export default function page() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <Image
-        src="/projects-background.png"
+        src="/background-2.jpg"
         alt="background image"
         fill
         className="object-cover opacity-80 -z-10"

@@ -8,10 +8,10 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen overflow-auto">
       <Image
-        src="/about-background.png"
+        src="/background-1.jpg"
         alt="background image"
         fill
-        className="object-cover opacity-50 -z-10"
+        className="object-cover opacity-80 -z-10"
       />
 
       <div className="mt-4 flex flex-col items-center justify-center w-full h-full z-10">

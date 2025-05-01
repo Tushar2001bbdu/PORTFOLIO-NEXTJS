@@ -11,22 +11,17 @@ export default function Navigation() {
     { label: "Contact", link: "/contact", icon: "contact", newTab: false },
     {
       label: "Github",
-      link: "https://www.github.com/codebucks27",
+      link: "https://www.github.com/Tushar2001bbdu",
       icon: "github",
       newTab: true,
     },
     {
       label: "LinkedIn",
-      link: "https://www.linkedin.com/in/codebucks",
+      link: "https://www.linkedin.com/in/tushar-gupta-b96735231/",
       icon: "linkedin",
       newTab: true,
     },
-    {
-      label: "X",
-      link: "https://www.x.com/code_bucks",
-      icon: "twitter",
-      newTab: true,
-    },
+    
     {
       label: "Resume",
       link: "/resume.pdf",
@@ -53,7 +48,7 @@ export default function Navigation() {
   return (
     <div className="fixed h-screen w-full flex justify-center items-center">
       <div className="relative w-fit h-fit group">
-      <div className="relative w-fit h-fit animate-orbit  group-hover:animate-none">
+      <div className="relative w-fit h-fit animate-orbit  group-hover:pause-animation">
         {BtnList.map((btn, index) => {
           const angle = (index * angleIncrement * Math.PI) / 180;
           const x = radius * Math.cos(angle);
