@@ -15,10 +15,10 @@ export default function Form() {
   const onSubmit = (data) => {
    
    try{
-    emailjs.send("service_3t45cxj","template_4067gnr"
+    emailjs.send(process.env.NEXT_PUBLIC_SERVICE_ID,process.env.NEXT_PUBLIC_TEMPLATE_ID
       ,
       data,
-      "yl-4aq68v2DVWy_8B")
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         setStatus("success");
@@ -40,7 +40,7 @@ export default function Form() {
     <>
     {success && (
         <Alert severity={status} onClose={() => setSuccess(false)}>
-          "Your Message Has Been Sent Successfully"
+          &quot;Your Message Has Been Sent Successfully&quot;
         </Alert>
       )}
     <form className="max-w-md w-full flex flex-col items-center space-y-4 p-6 shadow-lg rounded-md" onSubmit={handleSubmit(onSubmit)}>
