@@ -22,8 +22,9 @@ export default function Contact() {
           Get in Touch
           </h1>
           <p className="text-center font-light text-sm xs:text-base">
-          Whether you have a question, a project idea, or just want to say hi — I'm always open to connecting. Drop your message below and I'll get back to you as soon as I can.
-          </p>
+  Whether you have a question, a project idea, or just want to say hi — I&apos;m always open to connecting. Drop your message below and I&apos;ll get back to you as soon as I can.
+</p> 
+
         </section>
         <ContactForm/>
       </article>
