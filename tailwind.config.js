@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,12 +24,25 @@ module.exports = {
           '0%': { transform: 'rotate(360deg)' },
           '100%': { transform: 'rotate(0deg)' },
         },
+        staticRotation: {
+          '0%': { transform: 'rotate(0deg) translateX(150px) rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg) translateX(150px) rotate(-360deg)' },
+        }
       },
       animation: {
+        static:'staticRotation 20s linear infinite',
         orbit: 'orbit 20s linear infinite',
         orbitReverse: 'orbitReverse 20s linear infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.pause-animation': {
+          'animation-play-state': 'paused',
+        },
+      });
+    },
+  ],
 };
