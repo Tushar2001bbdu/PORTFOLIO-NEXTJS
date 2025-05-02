@@ -46,8 +46,8 @@ export default function Home() {
 
       {showPrompt && (
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 z-50">
-          <div className="bg-white p-6 rounded-lg text-center shadow-xl">
-            <p className="text-lg font-semibold mb-4">Do you want to play music?</p>
+          <div className="bg-opacity-60 p-6 rounded-lg text-center shadow-xl">
+            <p className="text-lg text-light font-semibold mb-4">Do you want to play music?</p>
             <div className="flex justify-center gap-4">
               <button
                 onClick={handleYes}

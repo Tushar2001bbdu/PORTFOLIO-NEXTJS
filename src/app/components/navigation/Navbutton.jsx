@@ -40,7 +40,8 @@ export default function Navbutton({ x, y, label, link, newtab, icon, angle }) {
 
   return (
     <div
-      style={{ transform: `translate(${x}px, ${y}px) rotate(${angle}rad)` }}
+    style={{ transform: `translate(${x}px, ${y}px)` }}
+
       className="absolute z-50 flex justify-center items-center cursor-pointer group-hover:pointer-events-auto"
     >
       <Link
@@ -50,11 +51,10 @@ export default function Navbutton({ x, y, label, link, newtab, icon, angle }) {
                    hover:border-aqua-300 hover:shadow-aqua-500 transition-all duration-300
                    backdrop-blur-md ring-2 ring-aqua-400 ring-offset-2 ring-offset-black/50"
       >
-        {/* counter-rotate the icon using inline style */}
+      
         <FontAwesomeIcon
           icon={getIcon(icon)}
           className="text-white text-lg"
-          style={{ transform: `rotate(${-angle}rad)` }}
         />
       </Link>
       <span className='hidden peer-hover:block absolute -top-10 bg-gray-800 text-white text-sm rounded-md p-2 transition duration-300'>
